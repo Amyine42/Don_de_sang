@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{ 
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+
+.navigation .nav_element {
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin: 0 auto;
+    min-width: 1100px;
+    
+}
+.nav_element{
+    display: flex;
+    list-style: none;
+    gap: 4.68rem;
+    width: 47.5rem;
+    height: 2rem;
+    padding-top: 2.80rem;
+   
+}
+li a {
+    text-decoration: none;
+    color: #201A23;
+
+}
+.cta_survey   {
+    margin-top: 1.7em;
+    background: #EF3054;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em 2em 0.35em 1em;
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #EF3054;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+  }
+  
+  .cta_survey .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #EF3054;
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+  
+  .cta_survey:hover .icon {
+    width: calc(100% - 0.6em);
+  }
+  
+  .cta_survey .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #EF3054;
+  }
+  
+  .cta_survey:hover .icon svg {
+    transform: translateX(0.1em);
+  }
+  
+  .cta_survey:active .icon {
+    transform: scale(0.95);
+  }
+  
+  
+.logo{
+    width: 7.80rem;
+    height: 7rem;
+}
+.social_media{
+    margin-top: 2em;
+    margin-right: 1.5em;
+
+}
+.facebook_icon{
+    width: 1.70rem;
+    height: 1.70rem;
+}
+.right_side_home{
+    margin-top: 8rem;
+    margin-left: 3.125rem;
+    width: 36.37rem;
+    height: fit-content;
+  
+   
+}
+.headline{
+    font-size: 3rem;
+    color: #201A23;
+
+}
+.sub_headline{
+    color: #201A23;
+    height: auto;
+    font-size: 1rem;
+    margin-top: 1em;
+   
+    
+}
+
+.cta_home{
+    background-color: #EF3054;
+    max-width: 17rem;
+    height: 3.75rem;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 0.31rem;
+    margin-top: 1.25rem;
+}
+.cta_button{
+    color: #E1E6E1;
+}
+
+.Home{
+    display: flex;
+    background-color: white;
+    height: 53rem;
+    position: relative;
+    gap: 0.75em;
+    margin: 0 auto;
+    min-width: fit-content;
+}
+.left_side_home {
+    margin-top: 5rem;
+    margin:  5% auto;
+    height: fit-content;
+ 
+    width: 40%;
+}
+.left_side_home img {
+    min-width: 70%;
+}
+#survey {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #survey form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  #survey.hidden {
+    display: none;
+  }
+  
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+#FFF2F
+.wave svg {
+    position: relative;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+}
+
+.wave .shape-fill {
+    fill: #f5f5f5;
+}
+
+.why_donate{
+    background-color: #f5f5f5;
+    height: fit-content;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    column-gap: 1.875rem;
+    row-gap: 5.62rem;
+    overflow-x: hidden;
+}
+
+
+.div_1{
+    padding-top: 10rem;
+    width: 18.75rem;
+    margin-left: 3.125rem;
+    width: fit-content;
+    height: fit-content;
+    overflow-x: hidden;
+    
+    
+}
+.div_3{
+    margin-top: 8.75rem;
+    width: 22.06rem ;
+    width: fit-content;
+    height: fit-content;
+    
+}
+
+.learnmore_div{
+    display: flex;
+    gap: 0.5rem;
+   
+}
+.learnmore_div sub a {
+    text-decoration: none;
+    color: #201A23;
+}
+.learnmore_div img {
+    margin-top: 0.18rem;
+}
+
+.div_1 h4{
+    width: 41.65rem;
+    height: fit-content;
+    font-size: 3rem;
+    padding-bottom: 1.25rem;
+
+}
+
+.div_1 p{
+    width: 41.65rem;
+    height: fit-content;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+
+.div_2 img  {
+    width: 33.75rem;
+    height: 26.25rem;
+    margin-top: 7.5rem;
+    margin-left: 3.75rem;
+    
+}
+
+.div_3 h4{
+    width: fit-content;
+    height: fit-content;
+    font-size: 3rem;
+    margin-right: 2.5rem;
+    padding-bottom: 1.25rem;
+}
+
+.div_3 p{
+    width: 41.65rem;
+    height: fit-content;
+    font-size: 1rem;
+    margin-right: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+
+.div_4 img  {
+    width: 29.81rem;
+    height: 22.31rem;
+    margin-top: 10rem;
+    margin-left: 2.5rem;
+    padding-bottom: 1.25rem;
+}
+.div_5 h4{
+    width: 41.56rem;
+    height: 13.75rem;
+    font-size: 3rem;
+}
+
+.div_5 p{
+    width: 41.65rem;
+    height: fit-content;
+    font-size:  1rem;
+    margin-bottom: 0.75rem;
+   
+}
+
+
+.div_5{
+    margin-top: 8.75rem;
+    width: 18,75rem;
+    margin-left: 3.125rem;
+    width: fit-content;
+    height: fit-content;
+    overflow-x: hidden;
+   
+   
+}
+.div_6 img  {
+    margin-top: 5.75rem;
+    width: 33.7rem;
+    height: 26,25rem;
+    margin-left: 3.75rem;
+}
+
+
+
+

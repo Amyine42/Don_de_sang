@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{ 
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+html{
+    background-color: #EF3054;
+}
+
+.nav_element {
+    margin: 0 auto;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin: 0 auto;
+  
+    
+}
+.nav_element{
+    display: flex;
+    list-style: none;
+    gap: 4.68rem;
+    width: 47.5rem;
+    height: 1rem;
+    padding-top: 2.80rem;
+   
+}
+li a {
+    text-decoration: none;
+    color: #201A23;
+
+}
+.logo{
+    width: 7.80rem;
+    height: 7rem;
+}
+.social_media{
+    margin-top: 2em;
+    margin-right: 1.5em;
+
+}
+.facebook_icon{
+    width: 1.70rem;
+    height: 1.70rem;
+}
+
+
+.thanks_message {
+    margin-top: 1em ;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+
+}
+
+.thanks_paragraph {
+    text-align: center;
+    color: #fff;
+}
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+    background-color: azure;
+    height: 1600px;
+    margin-top: 2em;
+}
+
+
+.name_holder input {
+    width: 90%;
+    height: 3em;
+    
+}
+
+.container form {
+    padding-left: 5em;
+}
+.name_holder {
+    padding-top: 2em;
+     display: flex;
+     flex-direction: column;
+     gap: 0.7em;
+     margin: 0 auto;
+}
+
+.name_holder label {
+    font-weight: 400;
+}
+.phone_number {
+    padding-top: 2em;
+     display: flex;
+     flex-direction: column;
+     gap: 0.7em;
+}
+
+.phone_number label {
+    font-weight: 400;
+}
+.phone_number input {
+    width: 90%;
+    height: 3em;
+}
+.age_holder input {
+    width: 90%;
+    height: 3em;
+    
+}
+.age_holder {
+    padding-top: 2em;
+     display: flex;
+     flex-direction: column;
+     gap: 0.4em;
+     margin: 0 auto;
+}
+input{
+    background-color: #fff;
+}
+.age_holder label {
+    font-weight: 400;
+}
+
+.gender {
+    margin-top: 2em;
+}
+.vector_holder {
+    display: flex;
+    gap: 20%;
+    padding-left: 20% ;
+}
+.gender p {
+    font-weight: 600;
+}
+.menvector {
+    width: 15%;
+    margin: 2em 0 3em 0;
+    cursor: pointer;
+
+}
+.femalevector {
+    width: 12%;
+    margin: 2em 0 3em 0;
+    cursor: pointer;
+}
+
+.blood_type_selection{
+    display: grid;
+    grid-template-columns: repeat(9,5%);
+    gap: 3em;
+    height: 3em;
+    margin-top: 2em;
+}
+
+
+
+.blood_type label {
+    padding-top: 3em;
+    font-weight: 600;
+}
+.blood_type_selection div{
+  
+    padding: 1em 3em 1em 1.5em;
+    margin-bottom: 2em;
+    background-color: #eaeaea;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.blood_type_selection{
+    margin-bottom: 2em;
+    
+}
+
+.blood_type_selection div:hover {
+    background-color: #EF3054;
+}
+
+.question input {
+    margin-top: 2em;
+}
+
+.question label {
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+.question{
+    margin-bottom: 2em;
+}
+
+/* Custom radio button */
+.question input[type="radio"] {
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    outline: none;
+  }
+
+.question input[type="radio"]:checked {
+    background-color: #EF3054; 
+  }
+
+
+.submit{
+    background-color: #EF3054;
+    border: none;
+    padding: 1em 2em 1em 2em;
+    margin-left: 5em;
+    color: #fff;
+    border-radius: 0.7em;
+    width: 30%;
+    cursor: pointer;
+}
+.thanks_message_submit{
+    display: none;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 2em;
+}
+
