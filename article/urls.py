@@ -6,6 +6,6 @@ urlpatterns = [
     path("pourquoi/",views.desc),
     path('qui/',views.qui),
     path('ou-donner/',views.oudonner),
-    path('prendrerdv/',views.prendrerdv),
     path('contact/',views.contact),
+    path('survey/',views.survey),
 ]
