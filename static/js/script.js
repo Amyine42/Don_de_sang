@@ -1,24 +1,25 @@
-const path_men = document.querySelector(".menvector path");
-const path_female = document.querySelector(".femalevector path");
+const label_men = document.querySelector(".menvector");
+const label_female = document.querySelector(".femalevector");
 
-path_men.addEventListener('click', () => {
-  path_men.setAttribute('fill', 'skyblue');
-  path_female.setAttribute('fill', 'black');
+label_men.addEventListener('click', () => {
+  label_men.querySelector("path").setAttribute("fill", "skyblue");
+  label_female.querySelector("path").setAttribute("fill", "black");
 });
 
-path_female.addEventListener('click', () => {
-  path_female.setAttribute('fill', 'pink');
-  path_men.setAttribute('fill', 'black');
+label_female.addEventListener('click', () => {
+  label_female.querySelector("path").setAttribute("fill", "pink");
+  label_men.querySelector("path").setAttribute("fill", "black");
 });
 
-let btn_clicked = document.querySelectorAll(".blood_type_selection div") 
+let btn_clicked = document.querySelectorAll(".blood_type_selection div")
 
 btn_clicked.forEach(function(element) {
     element.onclick = function () {
+        element.querySelector("label").click();
         btn_clicked.forEach(function(element) {
             element.style.backgroundColor = ""
         })
-       this.style.backgroundColor = "#EF3054";
+       element.style.backgroundColor = "#EF3054";
     };
 })
 
@@ -30,7 +31,7 @@ const submit_paragrapgh = document.querySelector(".thanks_message_submit")
 
 
 container_hide.addEventListener('click', () => {
-    container.style.display = 'none' 
+    container.style.display = 'none'
     thanksmsg.style.display = 'none'
     paragrapghmsg.style.display = 'none'
     submit_paragrapgh.style.display = 'block'
