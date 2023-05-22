@@ -224,7 +224,11 @@ input{
     font-size: 2em;
     margin-top: 2em;
 }
-
+.thanks_message_submitt{
+    text-align: center;
+    font-size: 2em;
+    margin-top: 2em;
+}
 
 .fieldset_borderless {
     border: none;
