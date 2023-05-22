@@ -23,16 +23,16 @@ btn_clicked.forEach(function(element) {
     };
 })
 
-const container_hide = document.querySelector(".submit")
-const container = document.querySelector(".container")
-const thanksmsg = document.querySelector(".thanks_message")
-const paragrapghmsg = document.querySelector(".thanks_paragraph")
-const submit_paragrapgh = document.querySelector(".thanks_message_submit")
+// const container_hide = document.querySelector(".submit")
+// const container = document.querySelector(".container")
+// const thanksmsg = document.querySelector(".thanks_message")
+// const paragrapghmsg = document.querySelector(".thanks_paragraph")
+// const submit_paragrapgh = document.querySelector(".thanks_message_submit")
 
 
-container_hide.addEventListener('click', () => {
-    container.style.display = 'none'
-    thanksmsg.style.display = 'none'
-    paragrapghmsg.style.display = 'none'
-    submit_paragrapgh.style.display = 'block'
-})
+// container_hide.addEventListener('click', () => {
+//     container.style.display = 'none'
+//     thanksmsg.style.display = 'none'
+//     paragrapghmsg.style.display = 'none'
+//     submit_paragrapgh.style.display = 'block'
+// })

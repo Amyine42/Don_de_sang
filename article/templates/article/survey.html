@@ -53,36 +53,43 @@
     <h2 class="thanks_message">Merci de participer!</h2>
     <p class="thanks_paragraph">Cela ne vous prendra que 2 minutes.</p>
     <div class="container">
-        <form action="./survey.html" method="get">
+        <form action="{% url 'survey' %}" method="post">
+          {% csrf_token %}
             <div class="name_holder">
                 <label for="name">Nom</label>
-                <input type="text" name="name" id="name" >
+                <input type="text" name="name" id="name"  required>
             </div>
+            {% comment %} {% if form.name.errors %}
+              <div class="error">
+                <p>{{ form.name.errors }}</p>
+              </div>
+            {% endif %} {% endcomment %}
+
             <div class="name_holder">
                 <label for="name">Prénom</label>
-                <input type="text" name="fname" id="fname" >
+                <input type="text" name="fname" id="fname"  required>
             </div>
             <div class="age_holder">
                 <label for="age">Quel age avez vous?</label>
-                <input type="date" name="age" id="age" >
+                <input type="date" name="age" id="age"  required>
             </div>
             <div class="phone_number">
                 <label for="phone_number">Numéro de téléphone</label>
-                <input type="phone_number" name="phone_number" id="phone_number"  >
+                <input type="phone_number" name="phone_number" id="phone_number"   required>
             </div>
 
             <div class="gender">
               <fieldset class="fieldset_borderless">
                 <legend>Vous êtes...?</legend>
                 <div class="vector_holder">
-                  <input type="radio" name="gender" value="male" id="male">
-                  <label class="menvector" for="male">
+                  <input type="radio" name="gender" value="male" id="gender_male" required>
+                  <label class="menvector" for="gender_male">
                     <svg  viewBox="0 0 241 240" fill="#000000" xmlns="http://www.w3.org/2000/svg" >
                         <path d="M240.216 16C240.214 14.1447 239.889 12.304 239.256 10.56C238.576 9.0858 237.657 7.73422 236.536 6.56C236.188 6.10553 235.752 5.72483 235.256 5.44C234.338 4.50084 233.252 3.74117 232.056 3.2H230.456C228.638 1.68502 226.507 0.592111 224.216 0H160.216C155.972 0 151.903 1.68571 148.902 4.68629C145.901 7.68688 144.216 11.7565 144.216 16C144.216 20.2435 145.901 24.3131 148.902 27.3137C151.903 30.3143 155.972 32 160.216 32H184.536L150.456 64.8C130.637 51.1491 106.414 45.4397 82.5849 48.8026C58.7558 52.1655 37.0589 64.3555 21.7919 82.9579C6.52486 101.56 -1.19864 125.218 0.151259 149.246C1.50115 173.273 11.826 195.917 29.0806 212.692C46.3352 229.467 69.261 239.15 93.3167 239.823C117.372 240.496 140.804 232.109 158.969 216.324C177.134 200.539 188.708 178.508 191.398 154.593C194.089 130.679 187.699 106.627 173.496 87.2L208.216 53.6V80C208.216 84.2435 209.901 88.3131 212.902 91.3137C215.903 94.3143 219.972 96 224.216 96C228.459 96 232.529 94.3143 235.529 91.3137C238.53 88.3131 240.216 84.2435 240.216 80V16ZM96.2157 208C83.5577 208 71.184 204.246 60.6592 197.214C50.1345 190.182 41.9314 180.186 37.0874 168.492C32.2434 156.797 30.976 143.929 33.4455 131.514C35.9149 119.099 42.0103 107.696 50.9609 98.7452C59.9115 89.7946 71.3152 83.6992 83.7299 81.2297C96.1447 78.7603 109.013 80.0277 120.707 84.8717C132.402 89.7157 142.397 97.9188 149.43 108.444C156.462 118.968 160.216 131.342 160.216 144C160.216 160.974 153.473 177.252 141.471 189.255C129.468 201.257 113.19 208 96.2157 208Z" fill="black"/>
                     </svg>
                   </label>
-                  <input type="radio" name="gender" value="female" id="female">
-                  <label class="femalevector" for="female">
+                  <input type="radio" name="gender" value="female" id="gender_female" required>
+                  <label class="femalevector" for="gender_female">
                     <svg viewBox="0 0 216 294" fill="#000000" xmlns="http://www.w3.org/2000/svg">
                         <path d="M216 102.978C216.024 83.2574 210.095 63.9454 198.919 47.3434C187.743 30.7414 171.792 17.5492 152.965 9.33858C134.138 1.12795 113.229 -1.75496 92.7303 1.03332C72.2314 3.8216 53.0062 12.1635 37.3453 25.0652C21.6844 37.9669 10.248 54.8844 4.3986 73.8023C-1.45076 92.7201 -1.46647 112.841 4.35335 131.767C10.1732 150.693 21.5832 167.627 37.2239 180.55C52.8647 193.474 72.0768 201.843 92.5714 204.661V235.224H77.1428C73.0509 235.224 69.1266 236.772 66.2331 239.528C63.3397 242.284 61.7142 246.021 61.7142 249.918C61.7142 253.815 63.3397 257.553 66.2331 260.308C69.1266 263.064 73.0509 264.612 77.1428 264.612H92.5714V279.306C92.5714 283.203 94.1969 286.941 97.0903 289.696C99.9837 292.452 103.908 294 108 294C112.092 294 116.016 292.452 118.91 289.696C121.803 286.941 123.429 283.203 123.429 279.306V264.612H138.857C142.949 264.612 146.873 263.064 149.767 260.308C152.66 257.553 154.286 253.815 154.286 249.918C154.286 246.021 152.66 242.284 149.767 239.528C146.873 236.772 142.949 235.224 138.857 235.224H123.429V204.661C149.111 201.13 172.6 188.911 189.599 170.24C206.598 151.568 215.97 127.691 216 102.978ZM108 176.448C92.7425 176.448 77.8277 172.139 65.1417 164.066C52.4556 155.993 42.568 144.519 36.7292 131.094C30.8905 117.669 29.3628 102.897 32.3393 88.6451C35.3159 74.3934 42.6631 61.3023 53.4517 51.0273C64.2403 40.7524 77.9859 33.7551 92.9501 30.9202C107.914 28.0854 123.425 29.5403 137.521 35.1011C151.617 40.6618 163.665 50.0787 172.142 62.1607C180.618 74.2428 185.143 88.4474 185.143 102.978C185.143 112.627 183.147 122.18 179.271 131.094C175.394 140.008 169.712 148.107 162.548 154.929C155.385 161.752 146.881 167.163 137.521 170.856C128.162 174.548 118.13 176.448 108 176.448Z" fill="black"/>
                     </svg>
@@ -96,40 +103,40 @@
                 <legend>Quel est votre groupe sanguin? Si vous ne le connaissez pas, veuillez sélectionner l'option '?'</legend>
                 <div class="blood_type_selection">
                   <div>
-                    <input type="radio" name="blood_type" value="A+" id="A+">
-                    <label for="A+">A+</label>
+                    <input type="radio" name="blood_type" value="A+" id="blood_type_A+" required>
+                    <label for="blood_type_A+">A+</label>
                   </div>
                   <div>
-                    <input type="radio" name="blood_type" value="A-" id="A-">
-                    <label for="A-">A-</label>
+                    <input type="radio" name="blood_type" value="A-" id="blood_type_A-" required>
+                    <label for="blood_type_A-">A-</label>
                   </div>
                   <div>
-                    <input type="radio" name="blood_type" value="B+" id="B+">
-                    <label for="B+">B+</label>
+                    <input type="radio" name="blood_type" value="B+" id="blood_type_B+" required>
+                    <label for="blood_type_B+">B+</label>
                   </div>
                   <div>
-                    <input type="radio" name="blood_type" value="B-" id="B-">
-                    <label for="B-">B-</label>
+                    <input type="radio" name="blood_type" value="B-" id="blood_type_B-" required>
+                    <label for="blood_type_B-">B-</label>
                   </div>
                   <div>
-                    <input type="radio" name="blood_type" value="AB+" id="AB+">
-                    <label for="AB+">AB+</label>
+                    <input type="radio" name="blood_type" value="AB+" id="blood_type_AB+" required>
+                    <label for="blood_type_AB+">AB+</label>
                   </div>
                   <div>
-                    <input type="radio" name="blood_type" value="AB-" id="AB-">
-                    <label for="AB-">AB-</label>
+                    <input type="radio" name="blood_type" value="AB-" id="blood_type_AB-" required>
+                    <label for="blood_type_AB-">AB-</label>
                   </div>
                   <div>
-                    <input type="radio" name="blood_type" value="O+" id="O+">
-                    <label for="O+">O+</label>
+                    <input type="radio" name="blood_type" value="O+" id="blood_type_O+" required>
+                    <label for="blood_type_O+">O+</label>
                   </div>
                   <div>
-                    <input type="radio" name="blood_type" value="O-" id="O-">
-                    <label for="O-">O-</label>
+                    <input type="radio" name="blood_type" value="O-" id="blood_type_O-" required>
+                    <label for="blood_type_O-">O-</label>
                   </div>
                   <div>
-                    <input type="radio" name="blood_type" value="?" id="?">
-                    <label for="?">?</label>
+                    <input type="radio" name="blood_type" value="autre" id="blood_type_autre" required>
+                    <label for="blood_type_autre">?</label>
                   </div>
                 </div>
               </fieldset>
@@ -139,9 +146,9 @@
               <fieldset class="fieldset_borderless">
                 <legend>Avez-vous déjà donné votre sang auparavant?</legend>
                 <div>
-                    <input type="radio" name="blood_donation" value="oui" id="blood_donation_yes">
+                    <input type="radio" name="blood_donation" value="oui" id="blood_donation_yes" required>
                     <label for="blood_donation_yes">Oui</label>
-                    <input type="radio" name="blood_donation" value="non" id="blood_donation_no">
+                    <input type="radio" name="blood_donation" value="non" id="blood_donation_no" required>
                     <label for="blood_donation_no">Non</label>
                 </div>
               </fieldset>
@@ -151,9 +158,9 @@
               <fieldset class="fieldset_borderless">
                 <legend>Prenez-vous des médicaments actuellement?</legend>
                 <div>
-                    <input type="radio" name="second_question" value="oui" id="second_question_yes">
+                    <input type="radio" name="second_question" value="oui" id="second_question_yes" required>
                     <label for="second_question_yes">Oui</label>
-                    <input type="radio" name="second_question" value="non" id="second_question_no">
+                    <input type="radio" name="second_question" value="non" id="second_question_no" required>
                     <label for="second_question_no">Non</label>
                 </div>
               </fieldset>
@@ -163,9 +170,9 @@
               <fieldset class="fieldset_borderless">
                 <legend>Avez-vous des antécédents de maladies transmissibles par le sang?</legend>
                 <div>
-                    <input type="radio" name="third_question" value="oui" id="third_question_yes">
+                    <input type="radio" name="third_question" value="oui" id="third_question_yes" required>
                     <label for="third_question_yes">Oui</label>
-                    <input type="radio" name="third_question" value="non" id="third_question_no">
+                    <input type="radio" name="third_question" value="non" id="third_question_no" required>
                     <label for="third_question_no">Non</label>
                 </div>
               </fieldset>
@@ -175,9 +182,9 @@
               <fieldset class="fieldset_borderless">
                 <legend>Avez-vous voyagé récemment dans un pays où des maladies infectieuses sont répandues?</legend>
                 <div>
-                    <input type="radio" name="fourth_question" value="oui" id="fourth_question_yes">
+                    <input type="radio" name="fourth_question" value="oui" id="fourth_question_yes" required>
                     <label for="fourth_question_yes">Oui</label>
-                    <input type="radio" name="fourth_question" value="non" id="fourth_question_no">
+                    <input type="radio" name="fourth_question" value="non" id="fourth_question_no" required>
                     <label for="fourth_question_no">Non</label>
                 </div>
               </fieldset>
@@ -187,9 +194,9 @@
               <fieldset class="fieldset_borderless">
                 <legend>Avez-vous été vacciné récemment?</legend>
                 <div>
-                    <input type="radio" name="fifth_question" value="oui" id="fifth_question_yes">
+                    <input type="radio" name="fifth_question" value="oui" id="fifth_question_yes" required>
                     <label for="fifth_question_yes">Oui</label>
-                    <input type="radio" name="fifth_question" value="non" id="fifth_question_no">
+                    <input type="radio" name="fifth_question" value="non" id="fifth_question_no" required>
                     <label for="fifth_question_no">Non</label>
                 </div>
               </fieldset>
@@ -199,9 +206,9 @@
               <fieldset class="fieldset_borderless">
                 <legend>Avez-vous eu une chirurgie ou une transfusion sanguine récemment?</legend>
                 <div>
-                    <input type="radio" name="sixth_question" value="oui" id="sixth_question_yes">
+                    <input type="radio" name="sixth_question" value="oui" id="sixth_question_yes" required>
                     <label for="sixth_question_yes">Oui</label>
-                    <input type="radio" name="sixth_question" value="non" id="sixth_question_no">
+                    <input type="radio" name="sixth_question" value="non" id="sixth_question_no" required>
                     <label for="sixth_question_no">Non</label>
                 </div>
               </fieldset>
@@ -211,14 +218,14 @@
               <fieldset class="fieldset_borderless">
                 <legend>Avez-vous des symptômes tels que fièvre, toux ou maux de gorge?</legend>
                 <div>
-                    <input type="radio" name="sixth_question" value="oui" id="sixth_question_yes">
-                    <label for="sixth_question_yes">Oui</label>
-                    <input type="radio" name="sixth_question" value="non" id="sixth_question_no">
-                    <label for="sixth_question_no">Non</label>
+                    <input type="radio" name="seventh_question" value="oui" id="seventh_question_yes" required>
+                    <label for="seventh_question_yes">Oui</label>
+                    <input type="radio" name="seventh_question" value="non" id="seventh_question_no" required>
+                    <label for="seventh_question_no">Non</label>
                 </div>
               </fieldset>
             </div>
-            <button class="submit">soumettre</button>
+            <button type="submit" class="submit">soumettre</button>
         </form>
     </div>
     <div class="navbar">
