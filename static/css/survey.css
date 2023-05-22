@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-*{ 
+*{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -21,8 +21,8 @@ html{
     justify-content: space-between;
     background-color: white;
     margin: 0 auto;
-  
-    
+
+
 }
 .nav_element{
     display: flex;
@@ -31,7 +31,7 @@ html{
     width: 47.5rem;
     height: 1rem;
     padding-top: 2.80rem;
-   
+
 }
 li a {
     text-decoration: none;
@@ -78,7 +78,7 @@ li a {
 .name_holder input {
     width: 90%;
     height: 3em;
-    
+
 }
 
 .container form {
@@ -112,7 +112,7 @@ li a {
 .age_holder input {
     width: 90%;
     height: 3em;
-    
+
 }
 .age_holder {
     padding-top: 2em;
@@ -133,8 +133,8 @@ input{
 }
 .vector_holder {
     display: flex;
-    gap: 20%;
-    padding-left: 20% ;
+    gap: 10%;
+    padding-left: 10% ;
 }
 .gender p {
     font-weight: 600;
@@ -159,14 +159,12 @@ input{
     margin-top: 2em;
 }
 
+.blood_type_selection{
+    margin-bottom: 2em;
 
-
-.blood_type label {
-    padding-top: 3em;
-    font-weight: 600;
 }
+
 .blood_type_selection div{
-  
     padding: 1em 3em 1em 1.5em;
     margin-bottom: 2em;
     background-color: #eaeaea;
@@ -174,10 +172,6 @@ input{
     border: 1px solid #333;
     border-radius: 4px;
     cursor: pointer;
-}
-.blood_type_selection{
-    margin-bottom: 2em;
-    
 }
 
 .blood_type_selection div:hover {
@@ -193,12 +187,13 @@ input{
     margin-bottom: 2em;
 }
 .question{
+    margin-top: 2em;
     margin-bottom: 2em;
 }
 
 /* Custom radio button */
 .question input[type="radio"] {
-    appearance: none; 
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     width: 16px;
@@ -230,3 +225,14 @@ input{
     margin-top: 2em;
 }
 
+
+.fieldset_borderless {
+    border: none;
+    padding: 0;
+}
+
+/* input[type="radio"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+} */
